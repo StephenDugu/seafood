@@ -1,0 +1,42 @@
+<!--index.wxml-->
+<view class="container">
+  <swiper class="swiper" indicator-dots="true" indicator-color="#fff" indicator-active-color="#53AEED" autoplay="true" interval="3000" circular="true" duration="1000">  
+      <block wx:for="{{movies}}" wx:for-index="index">  
+        <swiper-item>  
+          <image src="{{item.url}}" class="slide-image" mode="aspectFill"></image>  
+        </swiper-item>  
+      </block>  
+    </swiper>
+    <view class="menus">
+      <view class="menu"  wx:for="{{navigation}}">
+          <navigator url="{{item.url}}" open-type="switchTab">
+            <view class="picture" id="{{item.bgcolor}}">
+                <image src="{{item.icon}}"></image>
+            </view>
+            <text class="word">{{item.titles}}</text>
+          </navigator>
+      </view>
+    </view> 
+    <view class="new" wx:for="{{program}}">
+        <view class="words">
+          <image class="newpicture" src="{{item.titlepic}}" bindtap="imgsee"></image>
+          <text  class="word">{{item.titleword}}</text>
+        </view>
+        <image class="newreport" src="{{item.posterurl}}"></image>
+        <view class="foods">
+            <view class="food" wx:for="{{item.newfoods}}">
+                <image class="foodpic" src="{{item.url}}" bindtap="imgsee" data-src="{{item.url}}"></image>
+                <text  class="word">{{item.name}}</text>
+                <text  class="foodprice">¥ {{item.price}}</text>
+            </view>
+        </view>
+    </view>
+    <view class="more">
+          <navigator url="../product/product" open-type="switchTab">
+             <text>更多美食...</text> 
+          </navigator>
+    </view>   
+    <view class="myname">
+      <text>-- 晟鹭缘科技有限公司支持 --</text>
+    </view>
+</view>

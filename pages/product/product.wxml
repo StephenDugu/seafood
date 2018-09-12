@@ -1,0 +1,23 @@
+<view class="container">
+    <scroll-view  class="tabtitle">
+        <view wx:for="{{tabs}}" class="tab-item {{currentTab==item.tabIndex?'active':''}}" data-current="{{item.tabIndex}}" bindtap="swichNav">{{item.tabtitle}}</view>
+    </scroll-view>
+    <swiper class="tab-content" current="{{currentTab}}" duration="300" bindchange="switchTab">
+        <swiper-item wx:for="{{cateList}}">
+            <scroll-view scroll-y="true" class="scoll-h" >
+                <block wx:for="{{item.list}}" wx:key="*this">
+                    <view class="item-ans">
+                        <view class="avatar">
+                            <image class="img" src="{{item.img}}"  data-src="{{item.img}}" bindtap="imgsee"></image>
+                        </view>
+                        <view class="expertInfo">
+                            <view class="name">{{item.name}}</view>
+                            <view class="tag">{{item.detail}}</view>
+                            <view class="price">¥ {{item.price}}</view>
+                        </view>
+                    </view>
+                </block>
+            </scroll-view>
+        </swiper-item>
+    </swiper>
+</view>

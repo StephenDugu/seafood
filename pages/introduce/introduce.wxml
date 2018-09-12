@@ -1,0 +1,41 @@
+<!--index.wxml-->
+<view class="container">
+<view class="header">
+    <view class="shophead">
+      <view class="titletop">
+            <image class="titlelogo" mode="cover" src="{{shoplogo}}"></image>
+            <text class="titletext">{{shopname}}</text>
+      </view>
+      <text class="titletime">营业时间：{{shoptime}}</text>
+    </view>
+    <view class="shoppurpose">
+      <text class="purpose"> {{purposeword}}</text>
+    </view>
+</view>
+  
+  
+  <view class="connection">
+    <view class="connect">
+        <image class="connectlogo" mode="cover" src="{{shopposition}}"></image>
+        <text class="connectvalue"  bindtap="click">厦门市集美区软件园三期B02</text>
+    </view>
+    <view class="connect">
+      <image class="connectlogo" mode="cover" src="{{shopphone}}"></image>
+      <text class="connectvalue"> {{phonenum}}</text>
+      <button class="connectphone" bindtap="calling">订位</button>
+    </view> 
+  </view>
+  <view class="balance">
+    <text class="balancetext">店内环境</text>
+    <scroll-view scroll-x="true"> 
+      <view class="uploadWrap" scroll-x="true"> 
+        <view class="upload_Item" wx:for='{{imgUrls}}'> 
+          <image class="upload_Item_img"  src='{{item}}'  wx:key="unique" data-index='{{index}}' bindtap="imgsee"></image> 
+        </view> 
+      </view> 
+    </scroll-view> 
+  </view>
+  <view class="myname">
+      <text>-- 晟鹭缘科技有限公司支持 --</text>
+  </view>
+</view>

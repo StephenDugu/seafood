@@ -1,0 +1,47 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/product/product",
+    "pages/introduce/introduce"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "小渔人大排档",
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#C1DFF9"
+  },
+  "tabBar": {
+    "color": "#8F9295",
+    "selectedColor": "#53AEED",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "text": "首页",
+        "pagePath": "pages/index/index",
+        "iconPath": "images/homepage.png",
+        "selectedIconPath": "images/homepageActive.png"
+      },
+      {
+        "text": "美食",
+        "pagePath": "pages/product/product",
+        "iconPath": "images/classify.png",
+        "selectedIconPath": "images/classifyActive.png"
+      },
+      {
+        "text": "小渔人",
+        "pagePath": "pages/introduce/introduce",
+        "iconPath": "images/shop.png",
+        "selectedIconPath": "images/shopActive.png"
+      }
+    ]
+  },
+  "networkTimeout": {
+    "request": 6000,
+    "downloadFile": 6000
+    },
+  "debug": true,
+  "functionalPages": true,
+  "requiredBackgroundModes": []
+}
